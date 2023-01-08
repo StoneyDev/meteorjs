@@ -11,4 +11,4 @@
 
 OR
 
-Go to [lempire.eu.meteorapp.com](lempire.eu.meteorapp.com) for live demo
+Go to [https://lempire.eu.meteorapp.com/](https://lempire.eu.meteorapp.com/) for live demo
