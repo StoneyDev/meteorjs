@@ -1,0 +1,11 @@
+<template name="List_container_page">
+  {{#if isLoading}}
+    <div class="text-center">Chargement des données</div>
+  {{else }} 
+    {{#each exports}} 
+      {{> Export_row}} 
+    {{else}}
+      <h2 class="text-center font-bold">Aucun export</h2>
+    {{/each}} 
+  {{/if}}
+</template>
