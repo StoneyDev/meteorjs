@@ -13,7 +13,9 @@
   "dependencies": {
     "@babel/runtime": "^7.17.9",
     "jquery": "^3.6.0",
-    "meteor-node-stubs": "^1.2.1"
+    "meteor-node-stubs": "^1.2.1",
+    "postcss": "^8.4.20",
+    "postcss-load-config": "^3.1.0"
   },
   "meteor": {
     "mainModule": {
@@ -24,8 +26,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.20",
-    "postcss-load-config": "^3.1.0",
     "@babel/core": "^7.20.12",
     "@babel/eslint-parser": "^7.19.1",
     "eslint": "^8.31.0",
