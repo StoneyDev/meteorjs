@@ -1,7 +1,7 @@
 <template name="Export_row">
-  <div class="flex mb-5">
+  <div class="flex mb-5 items-center">
     <div class="flex-1">
-      {{#if complete progress}}
+      {{#if complete status}}
         <a class="underline" href="{{url}}" target="_blank">{{url}}</a>
       {{else}}
         <p>{{url}}</p>
@@ -9,5 +9,9 @@
     </div>
 
     <div>{{progress}}%</div>
+
+    {{#if complete status}}
+      <button class="delete rounded bg-red-800 p-2 ml-5">X</button>
+    {{/if}}
   </div>
 </template>

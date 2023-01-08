@@ -21,7 +21,7 @@ Template.List_container_page.onCreated(function listContainerPageOnCreated() {
 
 Template.List_container_page.helpers({
   exports() {
-    return ExportsCollection.find({}, { sort: { createdAt: -1 } });
+    return ExportsCollection.find({}, { sort: { createdAt: -1 } }).fetch();
   },
   isLoading() {
     return Template.instance().state.get(IS_LOADING);

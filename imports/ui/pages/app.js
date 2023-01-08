@@ -4,7 +4,7 @@ import '../pages/list-container/list-container-page';
 import './app.html';
 
 Template.Action.events({
-  async 'click button'(_0, _1) {
+  async 'click button'() {
     let progress = 0;
 
     // Insert an export into the collection and get id
@@ -16,7 +16,7 @@ Template.Action.events({
         clearInterval(progressInterval);
 
         // Update and set random url
-        await Meteor.callAsync('exports.setUrl', id, getRandomUrl());
+        await Meteor.callAsync('exports.setData', id, { url: getRandomUrl(), status: 'DONE' });
 
         return;
       }
@@ -24,7 +24,7 @@ Template.Action.events({
       progress += 5;
 
       // Update progress
-      await Meteor.callAsync('exports.setProgress', id, progress);
+      await Meteor.callAsync('exports.setData', id, { progress });
     }, 1000);
   },
 });
