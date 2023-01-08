@@ -1,0 +1,13 @@
+<template name="Export_row">
+  <div class="flex mb-5">
+    <div class="flex-1">
+      {{#if complete progress}}
+        <a class="underline" href="{{url}}" target="_blank">{{url}}</a>
+      {{else}}
+        <p>{{url}}</p>
+      {{/if}}
+    </div>
+
+    <div>{{progress}}%</div>
+  </div>
+</template>
