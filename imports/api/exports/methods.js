@@ -7,23 +7,22 @@ Meteor.methods({
     const id = await ExportsCollection.insertAsync({
       url: 'Export en cours',
       progress: 0,
+      status: 'PENDING',
       createdAt: new Date(),
     });
 
     return id;
   },
 
-  // Update url field
-  async 'exports.setUrl'(id, url) {
+  // Update data
+  async 'exports.setData'(id, data) {
     await ExportsCollection.updateAsync(id, {
-      $set: { url },
+      $set: data,
     });
   },
 
-  // Update progress field
-  async 'exports.setProgress'(id, progress) {
-    await ExportsCollection.updateAsync(id, {
-      $set: { progress },
-    });
+  // Update data
+  async 'exports.remove'(id) {
+    await ExportsCollection.removeAsync(id);
   },
 });
